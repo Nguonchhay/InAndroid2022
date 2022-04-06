@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">InAndroid2022</string>
     <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign In</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="do_you_have_an_account_yet">Do you have an account yet?</string>
 </resources>
