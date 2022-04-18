@@ -30,12 +30,14 @@ class MainActivity : AppCompatActivity() {
             when(it.itemId) {
                 R.id.menuHome -> {
                     setFragment(HomeFragment())
+                    binding.toolbarTitle.text = "Super News"
                 }
                 R.id.menuFavorite -> {
                     setFragment(FavoriteFragment())
+                    binding.toolbarTitle.text = "Favorite"
                 }
                 R.id.menuSetting -> {
-                    startActivity(Intent(this@MainActivity, SettingActivity::class.java))
+                    startActivity(Intent(this@MainActivity, Register2Activity::class.java))
                 }
             }
             true
