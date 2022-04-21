@@ -1,4 +1,4 @@
-package com.nguonchhay.inandroid2022
+package com.nguonchhay.inandroid2022.ui.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

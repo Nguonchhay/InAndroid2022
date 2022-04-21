@@ -1,10 +1,10 @@
-package com.nguonchhay.inandroid2022
+package com.nguonchhay.inandroid2022.ui.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
 import androidx.fragment.app.Fragment
+import com.nguonchhay.inandroid2022.R
 import com.nguonchhay.inandroid2022.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

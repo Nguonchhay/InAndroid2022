@@ -1,9 +1,10 @@
-package com.nguonchhay.inandroid2022
+package com.nguonchhay.inandroid2022.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
+import com.nguonchhay.inandroid2022.R
 import com.nguonchhay.inandroid2022.databinding.ActivityRegister2Binding
 import com.nguonchhay.inandroid2022.extensions.hideSoftKeyboard
 
