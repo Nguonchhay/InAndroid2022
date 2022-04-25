@@ -1,4 +1,4 @@
-package com.nguonchhay.inandroid2022.ui.activities
+package com.nguonchhay.inandroid2022.ui.fragments
 
 import androidx.fragment.app.Fragment
 import com.nguonchhay.inandroid2022.R

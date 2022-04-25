@@ -6,6 +6,8 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.nguonchhay.inandroid2022.R
 import com.nguonchhay.inandroid2022.databinding.ActivityMainBinding
+import com.nguonchhay.inandroid2022.ui.fragments.FavoriteFragment
+import com.nguonchhay.inandroid2022.ui.fragments.HomeFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,13 +25,14 @@ class MainActivity : AppCompatActivity() {
 //            startActivity(intent)
 //        }
 
+        val homeFragment = HomeFragment(this)
         // Set Home as default fragment
-        setFragment(HomeFragment())
+        setFragment(homeFragment)
 
         binding.bottomNavMain.setOnItemSelectedListener {
             when(it.itemId) {
                 R.id.menuHome -> {
-                    setFragment(HomeFragment())
+                    setFragment(homeFragment)
                     binding.toolbarTitle.text = "Super News"
                 }
                 R.id.menuFavorite -> {

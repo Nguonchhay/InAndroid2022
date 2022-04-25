@@ -8,8 +8,10 @@
         <entry key="..\:/Users/tnguonchhay/dev/teaching/InAndroid2022/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/tnguonchhay/dev/teaching/InAndroid2022/app/src/main/res/layout/activity_register.xml" value="0.13541666666666666" />
         <entry key="..\:/Users/tnguonchhay/dev/teaching/InAndroid2022/app/src/main/res/layout/fragment_favorite.xml" value="0.12635869565217392" />
-        <entry key="..\:/Users/tnguonchhay/dev/teaching/InAndroid2022/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/tnguonchhay/dev/teaching/InAndroid2022/app/src/main/res/layout/fragment_home.xml" value="0.18" />
         <entry key="..\:/Users/tnguonchhay/dev/teaching/InAndroid2022/app/src/main/res/layout/item_highlighted_category.xml" value="0.12635869565217392" />
+        <entry key="..\:/Users/tnguonchhay/dev/teaching/InAndroid2022/app/src/main/res/layout/item_latest_news.xml" value="0.12962962962962962" />
+        <entry key="..\:/Users/tnguonchhay/dev/teaching/InAndroid2022/app/src/main/res/layout/list_gender_items.xml" value="0.10733695652173914" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.21331521739130435" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.335" />
