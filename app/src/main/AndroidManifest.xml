@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.InAndroid2022">
         <activity
+            android:name=".ui.activities.NewsDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activities.Register2Activity"
             android:exported="false" />
         <activity

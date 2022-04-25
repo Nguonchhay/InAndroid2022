@@ -37,7 +37,7 @@ class HomeFragment(val context: Activity) : Fragment(R.layout.fragment_home) {
             News(R.drawable.news3, "News 3", "You can specify how many words should be generated right next to the word lorem. For example, lorem5 will generate a 5-words dummy text."),
             News(R.drawable.news4, "News 4", "You can specify how many words should be generated right next to the word lorem. For example, lorem5 will generate a 5-words dummy text.")
         )
-        val latestNewsAdapter = LatestNewsAdapter(latestNews)
+        val latestNewsAdapter = LatestNewsAdapter(context, latestNews)
         val rvLatestNews = view.findViewById<RecyclerView>(R.id.rvLatestNews)
         rvLatestNews.adapter = latestNewsAdapter
         rvLatestNews.layoutManager = LinearLayoutManager(context)
