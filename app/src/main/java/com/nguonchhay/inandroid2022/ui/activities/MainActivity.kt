@@ -8,6 +8,7 @@ import com.nguonchhay.inandroid2022.R
 import com.nguonchhay.inandroid2022.databinding.ActivityMainBinding
 import com.nguonchhay.inandroid2022.ui.fragments.FavoriteFragment
 import com.nguonchhay.inandroid2022.ui.fragments.HomeFragment
+import com.nguonchhay.inandroid2022.ui.fragments.NewsFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,6 +35,10 @@ class MainActivity : AppCompatActivity() {
                 R.id.menuHome -> {
                     setFragment(homeFragment)
                     binding.toolbarTitle.text = "Super News"
+                }
+                R.id.menuNews -> {
+                    setFragment(NewsFragment(supportFragmentManager, lifecycle))
+                    binding.toolbarTitle.text = "News"
                 }
                 R.id.menuFavorite -> {
                     setFragment(FavoriteFragment())

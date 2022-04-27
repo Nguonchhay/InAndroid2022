@@ -8,6 +8,12 @@
         />
 
     <item
+        android:id="@+id/menuNews"
+        android:title="@string/news"
+        android:icon="@drawable/icon_news"
+        />
+
+    <item
         android:id="@+id/menuFavorite"
         android:title="@string/favorite"
         android:icon="@drawable/icon_heart"

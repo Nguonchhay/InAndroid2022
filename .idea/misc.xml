@@ -5,14 +5,20 @@
       <map>
         <entry key="..\:/Users/tnguonchhay/dev/teaching/InAndroid2022/app/src/main/res/drawable/edit_style.xml" value="0.5" />
         <entry key="..\:/Users/tnguonchhay/dev/teaching/InAndroid2022/app/src/main/res/layout/activity_login.xml" value="0.33" />
-        <entry key="..\:/Users/tnguonchhay/dev/teaching/InAndroid2022/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/tnguonchhay/dev/teaching/InAndroid2022/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/tnguonchhay/dev/teaching/InAndroid2022/app/src/main/res/layout/activity_news_detail.xml" value="0.21" />
         <entry key="..\:/Users/tnguonchhay/dev/teaching/InAndroid2022/app/src/main/res/layout/activity_register.xml" value="0.13541666666666666" />
+        <entry key="..\:/Users/tnguonchhay/dev/teaching/InAndroid2022/app/src/main/res/layout/fragment_all_news.xml" value="0.21" />
         <entry key="..\:/Users/tnguonchhay/dev/teaching/InAndroid2022/app/src/main/res/layout/fragment_favorite.xml" value="0.12635869565217392" />
+        <entry key="..\:/Users/tnguonchhay/dev/teaching/InAndroid2022/app/src/main/res/layout/fragment_food.xml" value="0.13677536231884058" />
         <entry key="..\:/Users/tnguonchhay/dev/teaching/InAndroid2022/app/src/main/res/layout/fragment_home.xml" value="0.18" />
+        <entry key="..\:/Users/tnguonchhay/dev/teaching/InAndroid2022/app/src/main/res/layout/fragment_news.xml" value="0.22" />
+        <entry key="..\:/Users/tnguonchhay/dev/teaching/InAndroid2022/app/src/main/res/layout/fragment_technology.xml" value="0.13677536231884058" />
         <entry key="..\:/Users/tnguonchhay/dev/teaching/InAndroid2022/app/src/main/res/layout/item_highlighted_category.xml" value="0.12635869565217392" />
         <entry key="..\:/Users/tnguonchhay/dev/teaching/InAndroid2022/app/src/main/res/layout/item_latest_news.xml" value="0.12962962962962962" />
+        <entry key="..\:/Users/tnguonchhay/dev/teaching/InAndroid2022/app/src/main/res/layout/item_news_gridview.xml" value="0.1" />
         <entry key="..\:/Users/tnguonchhay/dev/teaching/InAndroid2022/app/src/main/res/layout/list_gender_items.xml" value="0.10733695652173914" />
+        <entry key="..\:/Users/tnguonchhay/dev/teaching/InAndroid2022/app/src/main/res/menu/menu_bottom_nav.xml" value="0.20416666666666666" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.21331521739130435" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.335" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.335" />
