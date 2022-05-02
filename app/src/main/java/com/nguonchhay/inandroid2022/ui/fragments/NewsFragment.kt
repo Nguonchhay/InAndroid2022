@@ -10,16 +10,21 @@ import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.nguonchhay.inandroid2022.R
 import com.nguonchhay.inandroid2022.adapters.NewsFragmentAdapter
+import com.nguonchhay.inandroid2022.databinding.FragmentNewsBinding
 
 class NewsFragment(
     val fm: FragmentManager,
     val lc: Lifecycle
 ) : Fragment(R.layout.fragment_news) {
 
+    lateinit var binding: FragmentNewsBinding
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val tabCategory = view.findViewById<TabLayout>(R.id.tabCategory)
+        binding = FragmentNewsBinding.bind(view)
+
+//        val tabCategory = view.findViewById<TabLayout>(R.id.tabCategory)
 
         val categories = listOf<String>(
             "All",
@@ -32,11 +37,12 @@ class NewsFragment(
             TechnologyFragment(),
             FoodFragment()
         )
-        val newsAdapter = NewsFragmentAdapter(fragments, fm, lc)
-        val vpNewsFragment = view.findViewById<ViewPager2>(R.id.vpNewsFragment)
-        vpNewsFragment.adapter = newsAdapter
+//        val newsAdapter = NewsFragmentAdapter(fragments, fm, lc)
+//        val vpNewsFragment = view.findViewById<ViewPager2>(R.id.vpNewsFragment)
+//        vpNewsFragment.adapter = newsAdapter
+        binding.vpNewsFragment.adapter = NewsFragmentAdapter(fragments, fm, lc)
 
-        TabLayoutMediator(tabCategory, vpNewsFragment) { tab, position ->
+        TabLayoutMediator(binding.tabCategory, binding.vpNewsFragment) { tab, position ->
             tab.text = categories[position]
         }.attach()
     }

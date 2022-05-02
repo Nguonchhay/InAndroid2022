@@ -11,11 +11,16 @@ import com.nguonchhay.inandroid2022.R
 import com.nguonchhay.inandroid2022.adapters.HighlightedCategoryAdapter
 import com.nguonchhay.inandroid2022.adapters.LatestNewsAdapter
 import com.nguonchhay.inandroid2022.data_class.News
+import com.nguonchhay.inandroid2022.databinding.FragmentHomeBinding
 
 class HomeFragment(val context: Activity) : Fragment(R.layout.fragment_home) {
 
+    lateinit var binding: FragmentHomeBinding
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding = FragmentHomeBinding.bind(view)
 
         // Define static data for ViewPager
         val highLightedCategories = listOf<Int>(
@@ -24,8 +29,9 @@ class HomeFragment(val context: Activity) : Fragment(R.layout.fragment_home) {
             R.drawable.cate_3
         )
         val adapter = HighlightedCategoryAdapter(highLightedCategories)
-        val vpCategory = view.findViewById<ViewPager2>(R.id.vpCategories)
-        vpCategory.adapter = adapter
+//        val vpCategory = view.findViewById<ViewPager2>(R.id.vpCategories)
+//        vpCategory.adapter = adapter
+        binding.vpCategories.adapter = adapter
 
         // Define static data for RecyclerView
         /**
@@ -38,8 +44,10 @@ class HomeFragment(val context: Activity) : Fragment(R.layout.fragment_home) {
             News(R.drawable.news4, "News 4", "You can specify how many words should be generated right next to the word lorem. For example, lorem5 will generate a 5-words dummy text.")
         )
         val latestNewsAdapter = LatestNewsAdapter(context, latestNews)
-        val rvLatestNews = view.findViewById<RecyclerView>(R.id.rvLatestNews)
-        rvLatestNews.adapter = latestNewsAdapter
-        rvLatestNews.layoutManager = LinearLayoutManager(context)
+//        val rvLatestNews = view.findViewById<RecyclerView>(R.id.rvLatestNews)
+//        rvLatestNews.adapter = latestNewsAdapter
+//        rvLatestNews.layoutManager = LinearLayoutManager(context)
+        binding.rvLatestNews.adapter = latestNewsAdapter
+        binding.rvLatestNews.layoutManager = LinearLayoutManager(context)
     }
 }
