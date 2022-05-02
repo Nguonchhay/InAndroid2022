@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() {
                     binding.toolbarTitle.text = "Favorite"
                 }
                 R.id.menuSetting -> {
-                    startActivity(Intent(this@MainActivity, Register2Activity::class.java))
+                    startActivity(Intent(this@MainActivity, CounterMVVMActivity::class.java))
                 }
             }
             true
