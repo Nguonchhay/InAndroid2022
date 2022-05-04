@@ -29,5 +29,13 @@ class CounterMVVMActivity : AppCompatActivity() {
         binding.btnDecrease.setOnClickListener {
             counterViewModel.decrease()
         }
+
+        binding.btnStartCounter.setOnClickListener {
+            counterViewModel.startCounter()
+        }
+
+        binding.btnStopCounter.setOnClickListener {
+            counterViewModel.stopCounter()
+        }
     }
 }
