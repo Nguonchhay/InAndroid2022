@@ -4,32 +4,40 @@ import android.os.Bundle
 import android.view.View
 import android.widget.GridView
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import com.nguonchhay.inandroid2022.R
 import com.nguonchhay.inandroid2022.adapters.NewsGridViewAdapter
 import com.nguonchhay.inandroid2022.data_class.News
+import com.nguonchhay.inandroid2022.databinding.FragmentAllNewsBinding
+import com.nguonchhay.inandroid2022.ui.viewmodels.AllNewsViewModel
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
 
 
 class AllFragment : Fragment(R.layout.fragment_all_news) {
 
+    lateinit var binding: FragmentAllNewsBinding
+    lateinit var viewModel: AllNewsViewModel
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding = FragmentAllNewsBinding.bind(view)
+        viewModel = ViewModelProvider(this)[AllNewsViewModel::class.java]
 
-        val newsList = listOf<News>(
-            News(R.drawable.news1, "News 1", "You can specify how many words should be generated right next to the word lorem. For example, lorem5 will generate a 5-words dummy text."),
-            News(R.drawable.news2, "News 2", "You can specify how many words should be generated right next to the word lorem. For example, lorem5 will generate a 5-words dummy text."),
-            News(R.drawable.news3, "News 3", "You can specify how many words should be generated right next to the word lorem. For example, lorem5 will generate a 5-words dummy text."),
-            News(R.drawable.news4, "News 4", "You can specify how many words should be generated right next to the word lorem. For example, lorem5 will generate a 5-words dummy text."),
-            News(R.drawable.news1, "News 5", "You can specify how many words should be generated right next to the word lorem. For example, lorem5 will generate a 5-words dummy text."),
-            News(R.drawable.news2, "News 6", "You can specify how many words should be generated right next to the word lorem. For example, lorem5 will generate a 5-words dummy text."),
-            News(R.drawable.news3, "News 7", "You can specify how many words should be generated right next to the word lorem. For example, lorem5 will generate a 5-words dummy text."),
-            News(R.drawable.news4, "News 8", "You can specify how many words should be generated right next to the word lorem. For example, lorem5 will generate a 5-words dummy text.")
-        )
-        val gvAdapter = NewsGridViewAdapter(newsList)
-        val gvNews = view.findViewById<GridView>(R.id.gvNews)
-        gvNews.adapter = gvAdapter
-        gvNews.numColumns = 2
+        binding.gvNews.numColumns = 3
         val spacing = 15
-        gvNews.verticalSpacing = spacing
-        gvNews.horizontalSpacing = spacing
+        binding.gvNews.verticalSpacing = spacing
+        binding.gvNews.horizontalSpacing = spacing
+
+        startObserve()
+    }
+
+    private fun startObserve() {
+        lifecycleScope.launch {
+            viewModel.dataObserver.collectLatest {
+                binding.gvNews.adapter = NewsGridViewAdapter(it)
+            }
+        }
     }
 }
