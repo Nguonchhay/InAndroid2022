@@ -37,7 +37,7 @@ class HomeFragment(val context: Activity) : Fragment(R.layout.fragment_home) {
     private fun observeChange() {
         lifecycleScope.launch {
             viewModel.uiState.collectLatest {
-                binding.vpCategories.adapter = HighlightedCategoryAdapter(it.highlightedCategories)
+                binding.vpCategories.adapter = HighlightedCategoryAdapter(context, it.highlightedCategories)
                 binding.rvLatestNews.adapter = LatestNewsAdapter(context, it.latestNews)
             }
         }
