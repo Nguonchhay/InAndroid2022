@@ -7,10 +7,12 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
+import com.bumptech.glide.Glide
 import com.nguonchhay.inandroid2022.R
 import com.nguonchhay.inandroid2022.data_class.News
+import com.nguonchhay.inandroid2022.data_class.NewsRetrofit
 
-class NewsGridViewAdapter(val newsData: List<News>) : BaseAdapter() {
+class NewsGridViewAdapter(val newsData: List<NewsRetrofit>) : BaseAdapter() {
 
     override fun getCount(): Int = newsData.size
 
@@ -24,7 +26,7 @@ class NewsGridViewAdapter(val newsData: List<News>) : BaseAdapter() {
 
         val newsItem = newsData[position]
         val imageView = view.findViewById<ImageView>(R.id.newsImage)
-        imageView.setImageResource(newsItem.image)
+        Glide.with(parent.context).load(newsItem.image).into(imageView)
 
         val titleView = view.findViewById<TextView>(R.id.newsTitle)
         titleView.text = newsItem.title

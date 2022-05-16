@@ -8,11 +8,13 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.nguonchhay.inandroid2022.R
 import com.nguonchhay.inandroid2022.data_class.News
+import com.nguonchhay.inandroid2022.data_class.NewsKtor
 import com.nguonchhay.inandroid2022.ui.activities.NewsDetailActivity
 
-class LatestNewsAdapter(val context: Activity, val newsData: List<News>) : RecyclerView.Adapter<LatestNewsAdapter.ViewHolder>() {
+class LatestNewsAdapter(val context: Activity, val newsData: List<NewsKtor>) : RecyclerView.Adapter<LatestNewsAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
@@ -24,7 +26,7 @@ class LatestNewsAdapter(val context: Activity, val newsData: List<News>) : Recyc
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val newItem = newsData[position]
         val imageView: ImageView = holder.itemView.findViewById(R.id.newsImage)
-        imageView.setImageResource(newItem.image)
+        Glide.with(context).load(newItem.image).into(imageView)
 
         val titleView: TextView = holder.itemView.findViewById(R.id.newsTitle)
         titleView.text = newItem.title
