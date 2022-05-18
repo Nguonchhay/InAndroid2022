@@ -21,4 +21,6 @@
         <item>Female</item>
         <item>Not specify</item>
     </string-array>
+    <string name="title_activity_calculator_compose">CalculatorComposeActivity</string>
+    <string name="title_activity_news_compose">NewsComposeActivity</string>
 </resources>

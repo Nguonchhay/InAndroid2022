@@ -10,6 +10,7 @@ import com.nguonchhay.inandroid2022.R
 import com.nguonchhay.inandroid2022.data_class.NewsKtor
 import com.nguonchhay.inandroid2022.databinding.ActivityMainBinding
 import com.nguonchhay.inandroid2022.networks.apis.NewsApiInterface
+import com.nguonchhay.inandroid2022.ui.composes.CalculatorComposeActivity
 import com.nguonchhay.inandroid2022.ui.fragments.FavoriteFragment
 import com.nguonchhay.inandroid2022.ui.fragments.HomeFragment
 import com.nguonchhay.inandroid2022.ui.fragments.NewsFragment
@@ -54,23 +55,24 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.menuSetting -> {
                     // startActivity(Intent(this@MainActivity, CounterMVVMActivity::class.java))
-                    lifecycleScope.launch {
-                        val result = newApi.store(
-                            NewsKtor(
-                                title = "News 11",
-                                desc = "This is news 11",
-                                image = "https://i.picsum.photos/id/166/200/200.jpg?hmac=lghN9aMZHsvaZQVmJW3_fCu5ArnsnX8kJwM87m9K9dY"
-                            )
-                        )
-
-                        var resultString = "News store status: "
-                        if (result.id == 0) {
-                            resultString += " FAILED"
-                        } else {
-                            resultString += " Success -> ${result.id}"
-                        }
-                        Toast.makeText(this@MainActivity, resultString, Toast.LENGTH_SHORT).show()
-                    }
+//                    lifecycleScope.launch {
+//                        val result = newApi.store(
+//                            NewsKtor(
+//                                title = "News 11",
+//                                desc = "This is news 11",
+//                                image = "https://i.picsum.photos/id/166/200/200.jpg?hmac=lghN9aMZHsvaZQVmJW3_fCu5ArnsnX8kJwM87m9K9dY"
+//                            )
+//                        )
+//
+//                        var resultString = "News store status: "
+//                        if (result.id == 0) {
+//                            resultString += " FAILED"
+//                        } else {
+//                            resultString += " Success -> ${result.id}"
+//                        }
+//                        Toast.makeText(this@MainActivity, resultString, Toast.LENGTH_SHORT).show()
+//                    }
+                    startActivity(Intent(this@MainActivity, CalculatorComposeActivity::class.java))
                 }
             }
             true
