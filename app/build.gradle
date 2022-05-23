@@ -29,7 +29,6 @@ android {
 
     buildFeatures {
         viewBinding true
-        compose true
     }
 
     compileOptions {
@@ -38,9 +37,6 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion "1.1.1"
     }
     packagingOptions {
         resources {

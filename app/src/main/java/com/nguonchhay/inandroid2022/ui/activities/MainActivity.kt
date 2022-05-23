@@ -10,7 +10,6 @@ import com.nguonchhay.inandroid2022.R
 import com.nguonchhay.inandroid2022.data_class.NewsKtor
 import com.nguonchhay.inandroid2022.databinding.ActivityMainBinding
 import com.nguonchhay.inandroid2022.networks.apis.NewsApiInterface
-import com.nguonchhay.inandroid2022.ui.composes.CalculatorComposeActivity
 import com.nguonchhay.inandroid2022.ui.fragments.FavoriteFragment
 import com.nguonchhay.inandroid2022.ui.fragments.HomeFragment
 import com.nguonchhay.inandroid2022.ui.fragments.NewsFragment
@@ -54,6 +53,7 @@ class MainActivity : AppCompatActivity() {
                     binding.toolbarTitle.text = "Favorite"
                 }
                 R.id.menuSetting -> {
+                    startActivity(Intent(this@MainActivity, RoomDemoActivity::class.java))
                     // startActivity(Intent(this@MainActivity, CounterMVVMActivity::class.java))
 //                    lifecycleScope.launch {
 //                        val result = newApi.store(
@@ -72,7 +72,6 @@ class MainActivity : AppCompatActivity() {
 //                        }
 //                        Toast.makeText(this@MainActivity, resultString, Toast.LENGTH_SHORT).show()
 //                    }
-                    startActivity(Intent(this@MainActivity, CalculatorComposeActivity::class.java))
                 }
             }
             true
